@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Waves
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -370256550, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 680903070, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 512394018, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 148213427, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 1061619747, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -917273187, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -226086017, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 1104559544, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 1671078117, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -310787090, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -1377373708, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 442113552, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 714274384, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 1150629952, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -1380796609, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -56330257, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -1133497555, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 53386230, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: 1408429208, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -2102617478, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  - {fileID: -548533038, guid: 57d65cf9c01bd2449bccfffd70a6a28f, type: 3}
+  m_MinSpeed: 12
+  m_MaxSpeed: 12
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
