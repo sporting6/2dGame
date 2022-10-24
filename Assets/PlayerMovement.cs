@@ -5,29 +5,31 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float playerSpeed = 2f;
+    public float defaultPlayerSpeed = 2f;
+    private float playerSpeed;
     public Rigidbody2D player;
     public Animator anim;
     Vector2 movement;
-    Vector2 dash;
-    public float dashx = 3;
-    public float dashy = 3;
-    public float dashCooldown = 0;
+    public float dashDefaultTime = .5f;
+    public float dashTime = 0f;
+    public float dashCooldown = 0f;
+    public float dashSpeed = 32f;
+    private float time;
+    bool dashing = false;   
 
 
     void Start()
     {
-
+        dashTime = dashDefaultTime;
+        playerSpeed = defaultPlayerSpeed;
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        anim.SetFloat("DashTime", dashTime);
         Movement();
-
-        dash.x = dashx * movement.x;
-        dash.y = dashy * movement.y;
     }
 
     void FixedUpdate()
@@ -39,12 +41,39 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
+        Vector3 effectPos;
+        effectPos.x = player.position.x;
+        effectPos.y = player.position.y;
+        effectPos.z = 0;
+
         dashCooldown += Time.fixedDeltaTime;
+        
+        if (dashTime <= 0){
+            playerSpeed = 2f;
+            dashing = false;
+            anim.SetFloat("Dash", 0f);
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldown >= 3)
         {
             print("Dash");
-            player.MovePosition(player.position + dash * .2f);
+            
+            anim.SetFloat("Horizontal", movement.x);
+            anim.SetFloat("Vertical", movement.y);
+            anim.SetFloat("Dash", 1f);
+
+             
+
+            dashing = true;
+            playerSpeed = dashSpeed;
+            player.velocity = movement;
             dashCooldown = 0;
+            dashTime = dashDefaultTime;
+            time = Time.time;
+        }
+        if(dashing)
+        {
+            dashTime = dashTime - Time.time + time;
         }
     }
 
